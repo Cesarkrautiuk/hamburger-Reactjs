@@ -74,3 +74,62 @@ export const Content = styled.div`
   width: 100%;
   background: #000000;
 `;
+export const H3 = styled.h3`
+  width: 93%;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-top: 2.8rem;
+  font-size: 0.95rem;
+  &::before {
+    content: "";
+    height: 1px;
+    width: 2.8rem;
+    background: #ffb22f;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-left: 1.3rem;
+  }
+  &::after {
+    content: "";
+    height: 1px;
+    color: #fff;
+    flex: 0.98;
+    background: #ffb22f;
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+`;
+export const Map = styled.div`
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  iframe {
+    width: 90%;
+    height: 17rem;
+    border: none;
+  }
+`;
+export const Footer = styled.div`
+  width: 100%;
+  height: 30vh;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  img {
+    width: 80%;
+  }
+`;
+export const FooterLogo = styled.div`
+  width: 88%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 9%;
+  }
+`;

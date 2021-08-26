@@ -1,8 +1,10 @@
 import { GlobalStyle } from "../../styles/global";
 import ImgBurger from "../../asset/burger.png";
 import Onion from "../../asset/onion.png";
+import ImgFooter from "../../asset/imgFunter.png";
 import { Header } from "../../component/header";
 import { CadBox } from "../../component/cadBox";
+import Logo from "../../asset/logo.png";
 import {
   Box,
   BurgerImg,
@@ -10,6 +12,10 @@ import {
   BoxImg,
   OnionImg,
   Content,
+  H3,
+  Map,
+  Footer,
+  FooterLogo,
 } from "./styled";
 
 export function Home() {
@@ -35,6 +41,18 @@ export function Home() {
         <CadBox title="Está com pressa" />
         <CadBox title="Promoção" />
       </Content>
+      <Map>
+        <H3>Localização</H3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14452.896392411285!2d-50.169500124107294!3d-25.09427436069912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81a41af2e9b8b%3A0x26026dc9020b2b80!2sCentro%2C%20Ponta%20Grossa%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1630017583554!5m2!1spt-BR!2sbr"></iframe>
+      </Map>
+      <Footer>
+        <FooterLogo>
+          <img src={Logo} alt="Logo" />
+        </FooterLogo>
+        <div>
+          <img src={ImgFooter} alt="img" />
+        </div>
+      </Footer>
     </>
   );
 }
