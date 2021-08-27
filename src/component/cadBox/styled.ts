@@ -8,6 +8,19 @@ export const Content = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
+  @media (max-width: 800px) {
+    > div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 500px) {
+    > div {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+    }
+  }
 `;
 
 export const H3 = styled.h3`
@@ -35,6 +48,20 @@ export const H3 = styled.h3`
     background: #ffb22f;
     display: inline-block;
     margin-left: 0.5rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 81%;
+    margin: 0 auto;
+    &::before {
+      content: "";
+      height: 1px;
+      width: 2em;
+    }
+    &::after {
+      content: "";
+      height: 1px;
+    }
   }
 `;
 export const H4 = styled.h4`

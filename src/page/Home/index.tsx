@@ -4,7 +4,9 @@ import Onion from "../../asset/onion.png";
 import ImgFooter from "../../asset/imgFunter.png";
 import { Header } from "../../component/header";
 import { CadBox } from "../../component/cadBox";
+import { lista } from "../../banco/estaComPressa";
 import Logo from "../../asset/logo.png";
+import buger6 from "../../asset/buger6.png";
 import {
   Box,
   BurgerImg,
@@ -17,6 +19,7 @@ import {
   Footer,
   FooterLogo,
 } from "./styled";
+import { Item } from "../../component/itemBoxCard";
 
 export function Home() {
   return (
@@ -38,12 +41,36 @@ export function Home() {
         </BoxImg>
       </Box>
       <Content>
-        <CadBox title="Está com pressa" />
-        <CadBox title="Promoção" />
+        <CadBox title="Está com pressa">
+          {lista.map((item) => {
+            return (
+              <Item
+                key={item.title}
+                title={item.title}
+                text={item.drecription}
+                img={item.img}
+                price={item.price}
+              />
+            );
+          })}
+        </CadBox>
+        <CadBox title="Promoção">
+          <Item
+            title={"title"}
+            text=" Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola
+        caramelizada e Bacon crocante...  "
+            img={buger6}
+            price="23,00"
+          />
+        </CadBox>
       </Content>
       <Map>
         <H3>Localização</H3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14452.896392411285!2d-50.169500124107294!3d-25.09427436069912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81a41af2e9b8b%3A0x26026dc9020b2b80!2sCentro%2C%20Ponta%20Grossa%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1630017583554!5m2!1spt-BR!2sbr"></iframe>
+        <iframe
+          title="Map"
+          key="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14452.896392411285!2d-50.169500124107294!3d-25.09427436069912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81a41af2e9b8b%3A0x26026dc9020b2b80!2sCentro%2C%20Ponta%20Grossa%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1630017583554!5m2!1spt-BR!2sbr"
+        ></iframe>
       </Map>
       <Footer>
         <FooterLogo>

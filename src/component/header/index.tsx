@@ -8,12 +8,12 @@ export function Header() {
         <nav>
           <MdMenu color="#ffff" size="42" />
           <LogoImg src={Logo} />
-          <a>Sobre</a>
-          <a>Cardápio</a>
-          <a>Promoção</a>
+          <a href="##">Sobre</a>
+          <a href="##">Cardápio</a>
+          <a href="##"> Promoção</a>
         </nav>
         <div>
-          <MdShoppingCart size="22" color="#fff" />
+          <MdShoppingCart />
           <Span>0</Span>
           <button>Entrar</button>
         </div>
