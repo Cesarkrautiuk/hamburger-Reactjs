@@ -6,7 +6,6 @@ import { Header } from "../../component/header";
 import { CadBox } from "../../component/cadBox";
 import { lista } from "../../banco/estaComPressa";
 import Logo from "../../asset/logo.png";
-import buger6 from "../../asset/buger6.png";
 import {
   Box,
   BurgerImg,
@@ -55,13 +54,17 @@ export function Home() {
           })}
         </CadBox>
         <CadBox title="Promoção">
-          <Item
-            title={"title"}
-            text=" Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola
-        caramelizada e Bacon crocante...  "
-            img={buger6}
-            price="23,00"
-          />
+          {lista.map((item) => {
+            return (
+              <Item
+                key={item.title}
+                title={item.title}
+                text={item.drecription}
+                img={item.img}
+                price={item.price}
+              />
+            );
+          })}
         </CadBox>
       </Content>
       <Map>
