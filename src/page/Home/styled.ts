@@ -38,6 +38,17 @@ export const Description = styled.div`
     font-size: 1.1rem;
   }
   @media (max-width: 768px) {
+    width: 33vw;
+    h1 {
+      font-size: 4.4rem;
+      line-height: 93.39%;
+      margin-top: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 500px) {
     width: 80vw;
     display: block;
     margin-left: 0;
@@ -60,7 +71,8 @@ export const BoxImg = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 768px) {
+
+  @media (max-width: 500px) {
     display: none;
   }
 `;
@@ -68,7 +80,11 @@ export const OnionImg = styled.img`
   width: 24%;
   margin-left: 19rem;
 `;
-export const BurgerImg = styled.img``;
+export const BurgerImg = styled.img`
+  @media (max-width: 768px) {
+    width: 500px;
+  }
+`;
 
 export const Content = styled.div`
   width: 100%;
@@ -143,6 +159,12 @@ export const FooterLogo = styled.div`
   img {
     width: 9%;
     margin-left: 10rem;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 14%;
+    }
   }
   @media (max-width: 500px) {
     img {

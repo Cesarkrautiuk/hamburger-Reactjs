@@ -3,6 +3,9 @@ export const Content = styled.div`
   color: #fff;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    margin-bottom: 1.3rem;
+  }
   @media (max-width: 500px) {
     margin-bottom: 1.3rem;
   }

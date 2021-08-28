@@ -12,6 +12,7 @@ export const Content = styled.div`
     > div {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
     }
   }
   @media (max-width: 500px) {
@@ -49,14 +50,28 @@ export const H3 = styled.h3`
     display: inline-block;
     margin-left: 0.5rem;
   }
+  @media (max-width: 768px) {
+    width: 91%;
+    margin: 0 auto;
+    &::before {
+      content: "";
+      height: 1px;
+      margin-left: 1rem;
+    }
+    &::after {
+      content: "";
+      height: 1px;
+    }
+  }
 
   @media (max-width: 500px) {
-    width: 81%;
+    width: 86%;
     margin: 0 auto;
     &::before {
       content: "";
       height: 1px;
       width: 2em;
+      margin-left: 1rem;
     }
     &::after {
       content: "";

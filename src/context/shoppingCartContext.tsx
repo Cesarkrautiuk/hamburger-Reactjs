@@ -18,7 +18,6 @@ export function ShoppingCartContextProvider(props: AuthContextProviderProps) {
   function setItemShoppingCard(item: items) {
     setShopping([item, ...shopping]);
   }
-
   return (
     <shoppingcartContext.Provider value={{ setItemShoppingCard, shopping }}>
       {props.children}
