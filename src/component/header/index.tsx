@@ -1,10 +1,14 @@
 import Logo from "../../asset/logo.png";
 import { MdMenu, MdShoppingCart } from "react-icons/md";
 import { Menu, LogoImg, Span } from "./styled";
-export function Header() {
+import { HTMLAttributes } from "react";
+type Props = HTMLAttributes<HTMLHeadElement> & {
+  border: boolean;
+};
+export function Header({ border, ...rest }: Props) {
   return (
     <>
-      <Menu>
+      <Menu border={border} {...rest}>
         <nav>
           <MdMenu color="#ffff" size="42" />
           <LogoImg src={Logo} />

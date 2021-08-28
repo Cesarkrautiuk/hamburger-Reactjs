@@ -7,7 +7,6 @@ type PropsItem = {
   price: string;
 };
 export function Item({ title, text, img, price }: PropsItem) {
-  console.log(img);
   return (
     <Content>
       <Img src={img} />

@@ -4,7 +4,7 @@ import Onion from "../../asset/onion.png";
 import ImgFooter from "../../asset/imgFunter.png";
 import { Header } from "../../component/header";
 import { CadBox } from "../../component/cadBox";
-import { lista } from "../../banco/estaComPressa";
+import { lista, listaPromocao } from "../../banco/estaComPressa";
 import Logo from "../../asset/logo.png";
 import {
   Box,
@@ -19,12 +19,22 @@ import {
   FooterLogo,
 } from "./styled";
 import { Item } from "../../component/itemBoxCard";
-
+import { useEffect, useState } from "react";
 export function Home() {
+  const [herderBorber, setHerderBorber] = useState(false);
+  useEffect(() => {
+    const scrolListerner = () => {
+      window.scrollY > 10 ? setHerderBorber(true) : setHerderBorber(false);
+    };
+    window.addEventListener("scroll", scrolListerner);
+    return () => {
+      window.removeEventListener("scroll", scrolListerner);
+    };
+  }, []);
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Header border={herderBorber} />
       <Box>
         <Description>
           <h1>Hambúrguer caseiro</h1>
@@ -54,7 +64,7 @@ export function Home() {
           })}
         </CadBox>
         <CadBox title="Promoção">
-          {lista.map((item) => {
+          {listaPromocao.map((item) => {
             return (
               <Item
                 key={item.title}

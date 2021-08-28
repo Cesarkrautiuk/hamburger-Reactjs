@@ -1,6 +1,8 @@
-import styled from "styled-components";
-
-export const Menu = styled.header`
+import styled, { css } from "styled-components";
+type propsHeader = {
+  border: boolean;
+};
+export const Menu = styled.header<propsHeader>`
   background: #000000;
   height: 60px;
   width: 100%;
@@ -10,11 +12,17 @@ export const Menu = styled.header`
   gap: 0.5em;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid transparent;
+  ${(props) =>
+    props.border &&
+    css`
+      height: 60px;
+      border-bottom: 1px solid #262626;
+    `};
   nav {
     display: flex;
     align-items: center;
     margin-left: 4rem;
-    margin-top: 1rem;
   }
   a {
     color: #ffff;
@@ -28,6 +36,7 @@ export const Menu = styled.header`
     display: flex;
     align-items: center;
     margin-top: 1rem;
+    margin-bottom: 0.7rem;
     svg {
       width: 1.5rem;
       color: #ffff;
