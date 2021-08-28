@@ -2,10 +2,12 @@ import Logo from "../../asset/logo.png";
 import { MdMenu, MdShoppingCart } from "react-icons/md";
 import { Menu, LogoImg, Span } from "./styled";
 import { HTMLAttributes } from "react";
+import { useShoppingCart } from "../../hooks/useShoppingCart";
 type Props = HTMLAttributes<HTMLHeadElement> & {
   border: boolean;
 };
 export function Header({ border, ...rest }: Props) {
+  const { shopping } = useShoppingCart();
   return (
     <>
       <Menu border={border} {...rest}>
@@ -18,7 +20,7 @@ export function Header({ border, ...rest }: Props) {
         </nav>
         <div>
           <MdShoppingCart />
-          <Span>0</Span>
+          <Span>{shopping.length}</Span>
           <button>Entrar</button>
         </div>
       </Menu>

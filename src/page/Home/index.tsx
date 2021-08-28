@@ -54,11 +54,12 @@ export function Home() {
           {lista.map((item) => {
             return (
               <Item
-                key={item.title}
+                key={item.id}
                 title={item.title}
                 text={item.drecription}
                 img={item.img}
                 price={item.price}
+                id={item.id}
               />
             );
           })}
@@ -67,11 +68,12 @@ export function Home() {
           {listaPromocao.map((item) => {
             return (
               <Item
-                key={item.title}
+                key={item.id}
                 title={item.title}
                 text={item.drecription}
                 img={item.img}
                 price={item.price}
+                id={item.id}
               />
             );
           })}

@@ -1,7 +1,12 @@
+import { ShoppingCartContextProvider } from "./context/shoppingCartContext";
 import { Home } from "./page/Home";
 
 function App() {
-  return <Home />;
+  return (
+    <ShoppingCartContextProvider>
+      <Home />
+    </ShoppingCartContextProvider>
+  );
 }
 
 export default App;
