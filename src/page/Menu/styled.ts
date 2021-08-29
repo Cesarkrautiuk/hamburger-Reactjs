@@ -1,16 +1,16 @@
-import { HtmlHTMLAttributes } from "react";
 import styled from "styled-components";
 import MenuImg from "../../asset/menu.png";
 export const MenuTop = styled.div`
   background: url(${MenuImg}) no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   height: 37vh;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   > div {
     width: inherit;
     height: inherit;
@@ -28,13 +28,15 @@ export const H1 = styled.h1`
   font-weight: 700;
   color: #ffb22f;
   font-size: 4.2rem;
-  margin-top: 1.3rem;
+  margin-top: 6.1rem;
   @media (max-width: 500px) {
     font-size: 3.3rem;
-    margin: 0;
+    margin-top: 4.1rem;
   }
 `;
 export const Content = styled.div`
+  width: 100%;
+
   h3 {
     display: none;
   }

@@ -1,16 +1,18 @@
 import styled, { css } from "styled-components";
 type propsHeader = {
   border: boolean;
+  scroll?: boolean;
 };
 export const Menu = styled.header<propsHeader>`
-  background: transparent;
+  background: ${(propsHeader) =>
+    propsHeader.scroll ? "#000000" : "transparent"};
   height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5em;
-  position: sticky;
+  position: fixed;
   top: 0;
   border-bottom: 1px solid transparent;
   ${(props) =>

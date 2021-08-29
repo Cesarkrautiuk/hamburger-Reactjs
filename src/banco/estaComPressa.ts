@@ -50,6 +50,38 @@ export const lista: ListaType[] = [
     img: `${burger6}`,
     id: "14545dsdsad45487fdsfdssfffffe98ee",
   },
+  {
+    title: "Hambúrguer caseiro + batata",
+    drecription:
+      " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
+    price: "R$ 46.18",
+    img: `${burger7}`,
+    id: "14545dsdsad45487fdsfds",
+  },
+  {
+    title: "Hambúrguer Costela",
+    drecription:
+      " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
+    price: "R$ 35.60",
+    img: `${burger8}`,
+    id: "14545dsdsad45487fdsefdsfffffeee",
+  },
+  {
+    title: "Hambúrgue Calabresa",
+    drecription:
+      " Burger de costela de 120g , alface americana , tomate em rodelas , cebola roxa , delicioso molho da casa",
+    price: "R$ 76,75",
+    img: `${burger9}`,
+    id: "14545dsdsad45487fdsmfdsfffffeee",
+  },
+  {
+    title: "Hambúrgue da casa",
+    drecription:
+      " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
+    price: "R$ 45.60",
+    img: `${burger10}`,
+    id: "14545dsdsad45487fdsfdqsfffffeee",
+  },
 ];
 
 export const listDrink: ListaType[] = [

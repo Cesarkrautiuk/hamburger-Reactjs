@@ -5,6 +5,7 @@ import { HTMLAttributes } from "react";
 import { useShoppingCart } from "../../hooks/useShoppingCart";
 type Props = HTMLAttributes<HTMLHeadElement> & {
   border: boolean;
+  scroll?: boolean;
 };
 export function Header({ border, ...rest }: Props) {
   const { shopping } = useShoppingCart();

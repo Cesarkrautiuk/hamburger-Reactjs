@@ -1,4 +1,3 @@
-import { GlobalStyle } from "../../styles/global";
 import ImgBurger from "../../asset/burger.png";
 import Onion from "../../asset/onion.png";
 import ImgFooter from "../../asset/imgFunter.png";
@@ -22,9 +21,11 @@ import { Item } from "../../component/itemBoxCard";
 import { useEffect, useState } from "react";
 export function Home() {
   const [herderBorber, setHerderBorber] = useState(false);
+  const [scroll, setScroll] = useState(false);
   useEffect(() => {
     const scrolListerner = () => {
       window.scrollY > 10 ? setHerderBorber(true) : setHerderBorber(false);
+      window.scrollY > 10 ? setScroll(true) : setScroll(false);
     };
     window.addEventListener("scroll", scrolListerner);
     return () => {
@@ -33,7 +34,7 @@ export function Home() {
   }, []);
   return (
     <>
-      <Header border={herderBorber} />
+      <Header scroll={scroll} border={herderBorber} />
       <Box>
         <Description>
           <h1>Hambúrguer caseiro</h1>

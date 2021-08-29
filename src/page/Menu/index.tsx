@@ -3,13 +3,25 @@ import { CadBox } from "../../component/cadBox";
 import { Item } from "../../component/itemBoxCard";
 import { MenuTop, H1, Content, Nav, A } from "./styled";
 import { lista, listDrink } from "../../banco/estaComPressa";
-import { useCallback, useState } from "react";
+import { useEffect, useState } from "react";
 export function Menu() {
   const [typeProduct, SettypeProduct] = useState<string>("lanches");
+  const [herderBorber, setHerderBorber] = useState(false);
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    const scrolListerner = () => {
+      window.scrollY > 10 ? setHerderBorber(true) : setHerderBorber(false);
+      window.scrollY > 10 ? setScroll(true) : setScroll(false);
+    };
+    window.addEventListener("scroll", scrolListerner);
+    return () => {
+      window.removeEventListener("scroll", scrolListerner);
+    };
+  }, []);
   return (
     <>
       <MenuTop>
-        <Header border={false} />
+        <Header scroll={scroll} border={herderBorber} />
         <H1>Cardápio</H1>
         <div />
       </MenuTop>
