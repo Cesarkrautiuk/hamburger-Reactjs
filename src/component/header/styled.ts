@@ -82,6 +82,7 @@ export const Span = styled.span`
 export const LogoImg = styled.img`
   width: 21%;
   margin-left: 0.5rem;
+  cursor: pointer;
   @media (max-width: 500px) {
     width: 44%;
   }
