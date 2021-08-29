@@ -19,8 +19,10 @@ import {
 } from "./styled";
 import { Item } from "../../component/itemBoxCard";
 import { ListerScroll } from "../../hooks/scrolListerner";
+import { useHistory } from "react-router-dom";
 export function Home() {
   const { herderBorber, scroll } = ListerScroll();
+  const history = useHistory();
   return (
     <>
       <Header scroll={scroll} border={herderBorber} />
@@ -31,7 +33,7 @@ export function Home() {
             Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola
             caramelizada e Bacon crocante...
           </p>
-          <button>Cardápio</button>
+          <button onClick={() => history.push("/cardapio")}>Cardápio</button>
         </Description>
         <BoxImg>
           <BurgerImg src={ImgBurger} />
