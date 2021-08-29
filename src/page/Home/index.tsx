@@ -33,7 +33,6 @@ export function Home() {
   }, []);
   return (
     <>
-      <GlobalStyle />
       <Header border={herderBorber} />
       <Box>
         <Description>

@@ -3,7 +3,7 @@ type propsHeader = {
   border: boolean;
 };
 export const Menu = styled.header<propsHeader>`
-  background: #000000;
+  background: transparent;
   height: 60px;
   width: 100%;
   display: flex;

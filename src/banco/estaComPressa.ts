@@ -6,6 +6,10 @@ import burger7 from "../asset/burger7.png";
 import burger8 from "../asset/burger8.png";
 import burger9 from "../asset/burger9.png";
 import burger10 from "../asset/burger6.png";
+import drink1 from "../asset/drink1.png";
+import drink2 from "../asset/drink2.png";
+import drink3 from "../asset/drink3.png";
+import drink4 from "../asset/drink4.png";
 type ListaType = {
   id: string;
   title: string;
@@ -18,7 +22,7 @@ export const lista: ListaType[] = [
     title: "Hambúrguer caseiro",
     drecription:
       " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
-    price: "36.18",
+    price: "R$ 36.18",
     img: `${burger3}`,
     id: "14545dsdsad45487fds45vfds2",
   },
@@ -26,7 +30,7 @@ export const lista: ListaType[] = [
     title: "Hambúrguer Costela",
     drecription:
       " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
-    price: "25.60",
+    price: "R$ 25.60",
     img: `${burger4}`,
     id: "14545dsdsad45487fdsfdsrfffffee2e",
   },
@@ -34,7 +38,7 @@ export const lista: ListaType[] = [
     title: "Calabresa",
     drecription:
       " Burger de costela de 120g , alface americana , tomate em rodelas , cebola roxa , delicioso molho da casa",
-    price: "23,18",
+    price: "R$ 23,18",
     img: `${burger5}`,
     id: "14545dsdsad45487fdssfdsfffffee78e",
   },
@@ -42,9 +46,42 @@ export const lista: ListaType[] = [
     title: "Batata frita",
     drecription:
       " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
-    price: "15.60",
+    price: "R$ 15.60",
     img: `${burger6}`,
     id: "14545dsdsad45487fdsfdssfffffe98ee",
+  },
+];
+
+export const listDrink: ListaType[] = [
+  {
+    title: "  Batida de vodka com maracujá ",
+    drecription: "O drink de maracujá com vodka e leite condensado 120ml ",
+    price: "R$ 15.30",
+    img: `${drink1}`,
+    id: "14545dsdsad4548aqwr7fdsfds",
+  },
+  {
+    title: "Suco de Limão",
+    drecription:
+      " Água, suco concentrado de limão, aroma natural de limão 120ml",
+    price: "R$ 7.60",
+    img: `${drink2}`,
+    id: "14545dsdsad45487cmfdsefdsfffffeee",
+  },
+  {
+    title: "Cocktail de laranja",
+    drecription: " Raspas de laranja, leite condensado vodca 120ml ",
+    price: "R$ 25,75",
+    img: `${drink3}`,
+    id: "14545dsdsad4ty5487fdsmfdsfffffeee",
+  },
+  {
+    title: "Limonada de frutos vermelhos ",
+    drecription:
+      " Sumo limões,Hortelã verde,  açúcar  água gaseificada com sabor a framboesa frescas    ",
+    price: "R$ 45.60",
+    img: `${drink4}`,
+    id: "14545dsfgdsad45487fdsfdqsfffffeee",
   },
 ];
 
@@ -53,7 +90,7 @@ export const listaPromocao: ListaType[] = [
     title: "Hambúrguer caseiro + batata",
     drecription:
       " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
-    price: "46.18",
+    price: "R$ 46.18",
     img: `${burger7}`,
     id: "14545dsdsad45487fdsfds",
   },
@@ -61,7 +98,7 @@ export const listaPromocao: ListaType[] = [
     title: "Hambúrguer Costela",
     drecription:
       " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
-    price: "35.60",
+    price: "R$ 35.60",
     img: `${burger8}`,
     id: "14545dsdsad45487fdsefdsfffffeee",
   },
@@ -69,7 +106,7 @@ export const listaPromocao: ListaType[] = [
     title: "Hambúrgue Calabresa",
     drecription:
       " Burger de costela de 120g , alface americana , tomate em rodelas , cebola roxa , delicioso molho da casa",
-    price: "76,75",
+    price: "R$ 76,75",
     img: `${burger9}`,
     id: "14545dsdsad45487fdsmfdsfffffeee",
   },
@@ -77,7 +114,7 @@ export const listaPromocao: ListaType[] = [
     title: "Hambúrgue da casa",
     drecription:
       " Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola caramelizada e Bacon crocante...",
-    price: "45.60",
+    price: "R$ 45.60",
     img: `${burger10}`,
     id: "14545dsdsad45487fdsfdqsfffffeee",
   },

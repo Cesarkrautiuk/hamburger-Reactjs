@@ -28,6 +28,7 @@ export const P = styled.p`
   width: 100%;
   margin-top: 0.5rem;
   font-size: 1rem;
+  height: 17%;
 `;
 export const Span = styled.span`
   color: #ffb22f;

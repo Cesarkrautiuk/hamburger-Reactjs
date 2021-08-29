@@ -2,7 +2,7 @@ import { useShoppingCart } from "../../hooks/useShoppingCart";
 import { Img, H4, Span, P, Button, Content } from "./styled";
 
 type PropsItem = {
-  title: string;
+  title?: string;
   text: string;
   img: string;
   price: string;
