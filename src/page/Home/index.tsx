@@ -18,20 +18,9 @@ import {
   FooterLogo,
 } from "./styled";
 import { Item } from "../../component/itemBoxCard";
-import { useEffect, useState } from "react";
+import { ListerScroll } from "../../hooks/scrolListerner";
 export function Home() {
-  const [herderBorber, setHerderBorber] = useState(false);
-  const [scroll, setScroll] = useState(false);
-  useEffect(() => {
-    const scrolListerner = () => {
-      window.scrollY > 10 ? setHerderBorber(true) : setHerderBorber(false);
-      window.scrollY > 10 ? setScroll(true) : setScroll(false);
-    };
-    window.addEventListener("scroll", scrolListerner);
-    return () => {
-      window.removeEventListener("scroll", scrolListerner);
-    };
-  }, []);
+  const { herderBorber, scroll } = ListerScroll();
   return (
     <>
       <Header scroll={scroll} border={herderBorber} />

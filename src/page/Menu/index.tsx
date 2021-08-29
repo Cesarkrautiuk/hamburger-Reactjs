@@ -3,21 +3,11 @@ import { CadBox } from "../../component/cadBox";
 import { Item } from "../../component/itemBoxCard";
 import { MenuTop, H1, Content, Nav, A } from "./styled";
 import { lista, listDrink } from "../../banco/estaComPressa";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { ListerScroll } from "../../hooks/scrolListerner";
 export function Menu() {
   const [typeProduct, SettypeProduct] = useState<string>("lanches");
-  const [herderBorber, setHerderBorber] = useState(false);
-  const [scroll, setScroll] = useState(false);
-  useEffect(() => {
-    const scrolListerner = () => {
-      window.scrollY > 10 ? setHerderBorber(true) : setHerderBorber(false);
-      window.scrollY > 10 ? setScroll(true) : setScroll(false);
-    };
-    window.addEventListener("scroll", scrolListerner);
-    return () => {
-      window.removeEventListener("scroll", scrolListerner);
-    };
-  }, []);
+  const { herderBorber, scroll } = ListerScroll();
   return (
     <>
       <MenuTop>
