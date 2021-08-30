@@ -5,6 +5,7 @@ import { MenuTop, H1, Content, Nav, A } from "./styled";
 import { lista, listDrink } from "../../banco/estaComPressa";
 import { useState } from "react";
 import { ListerScroll } from "../../hooks/scrolListerner";
+import { Footer } from "../../component/footer";
 export function Menu() {
   const [typeProduct, SettypeProduct] = useState<string>("lanches");
   const { herderBorber, scroll } = ListerScroll();
@@ -62,6 +63,7 @@ export function Menu() {
           </CadBox>
         )}
       </Content>
+      <Footer />
     </>
   );
 }
