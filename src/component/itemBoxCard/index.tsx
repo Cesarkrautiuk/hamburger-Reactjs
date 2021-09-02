@@ -18,7 +18,7 @@ export function Item({ title, text, img, price, id }: PropsItem) {
       <Img src={img} />
       <H4>{title} </H4>
       <P>{text}</P>
-      <Span>{price}</Span>
+      <Span>R$ {price}</Span>
       <Button onClick={addShoppingCard}>Comprar</Button>
     </Content>
   );

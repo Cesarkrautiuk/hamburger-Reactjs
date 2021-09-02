@@ -25,9 +25,11 @@ type ListaType = {
 export function ShoppingCart() {
   const { herderBorber, scroll } = ListerScroll();
   const { shopping } = useShoppingCart();
+  const [total, setTotal] = useState(0);
   const [cards, setCards] = useState<ListaType[]>([]);
   useMemo(() => {
     let result: ListaType[] = [];
+    let total = 0;
     shopping.forEach((item) => {
       lista.forEach((items) => {
         if (item.id === items.id) {
@@ -39,6 +41,8 @@ export function ShoppingCart() {
             qt: item.qt,
           };
           result.push(newOject);
+          total += Number(items.price) * Number(item.qt);
+          setTotal(total);
         }
       });
     });
@@ -83,7 +87,14 @@ export function ShoppingCart() {
         </Shopping>
         <SummaryPurchase>
           <H2SummaryPurchase>Resumo do pedido</H2SummaryPurchase>
-          <BoxSummaryPurchase></BoxSummaryPurchase>
+          <BoxSummaryPurchase>
+            <span>
+              <p>{`${cards.length} Produto`}</p> <p>R$ {total}</p>
+            </span>
+            <span>
+              <p>Frete</p> <p> R$ 00.00 </p>
+            </span>
+          </BoxSummaryPurchase>
           <Buttom>Finalizar pedido</Buttom>
         </SummaryPurchase>
       </Content>
