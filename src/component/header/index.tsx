@@ -22,8 +22,10 @@ export function Header({ border, ...rest }: Props) {
           <a href="##"> Promoção</a>
         </nav>
         <div>
-          <MdShoppingCart />
-          <Span>{shopping.length}</Span>
+          <MdShoppingCart onClick={() => history.push("/shoppingCart")} />
+          <Span onClick={() => history.push("/shoppingCart")}>
+            {shopping.length}
+          </Span>
           <button>Entrar</button>
         </div>
       </Menu>

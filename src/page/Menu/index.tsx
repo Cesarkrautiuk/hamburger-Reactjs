@@ -11,8 +11,8 @@ export function Menu() {
   const { herderBorber, scroll } = ListerScroll();
   return (
     <>
+      <Header scroll={scroll} border={herderBorber} />
       <MenuTop>
-        <Header scroll={scroll} border={herderBorber} />
         <H1>Cardápio</H1>
         <div />
       </MenuTop>

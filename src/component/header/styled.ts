@@ -12,13 +12,12 @@ export const Menu = styled.header<propsHeader>`
   align-items: center;
   justify-content: space-between;
   gap: 0.5em;
-  position: fixed;
+  position: sticky;
   top: 0;
   border-bottom: 1px solid transparent;
   ${(props) =>
     props.border &&
     css`
-      height: 60px;
       border-bottom: 1px solid #262626;
     `};
   nav {
@@ -78,6 +77,7 @@ export const Span = styled.span`
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
+  cursor: pointer;
 `;
 export const LogoImg = styled.img`
   width: 21%;

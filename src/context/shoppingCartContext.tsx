@@ -14,7 +14,6 @@ export const shoppingcartContext = createContext({} as shoppingCartContextType);
 
 export function ShoppingCartContextProvider(props: AuthContextProviderProps) {
   const [shopping, setShopping] = useState<items[]>([]);
-  console.log(shopping);
   function setItemShoppingCard(item: items) {
     setShopping([item, ...shopping]);
   }
