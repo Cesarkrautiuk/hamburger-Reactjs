@@ -10,6 +10,7 @@ export const MenuTop = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -4.5%;
 
   > div {
     width: inherit;
@@ -18,9 +19,11 @@ export const MenuTop = styled.div`
   }
   @media (max-width: 768px) {
     height: 20vh;
+    margin-top: -7.7%;
   }
   @media (max-width: 500px) {
     height: 20vh;
+    margin-top: -17%;
   }
 `;
 export const H1 = styled.h1`
@@ -30,8 +33,8 @@ export const H1 = styled.h1`
   font-size: 4.2rem;
   margin-top: 6.1rem;
   @media (max-width: 500px) {
-    font-size: 3.3rem;
-    margin-top: 4.1rem;
+    font-size: 2.5rem;
+    margin-top: 5rem;
   }
 `;
 export const Content = styled.div`

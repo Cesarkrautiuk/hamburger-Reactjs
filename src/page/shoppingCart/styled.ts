@@ -33,7 +33,7 @@ export const H3Shopping = styled.h3`
   color: #ffb22f;
   font-size: 1.1rem;
   @media (max-width: 500px) {
-    font-size: 1rem;
+    font-size: 0.99rem;
   }
 `;
 export const ListShopping = styled.table`
@@ -55,19 +55,40 @@ export const ListShopping = styled.table`
   }
   p {
     font-weight: 300;
+    display: flex;
+  }
+  svg {
+    color: #fff;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
   }
   @media (max-width: 500px) {
     width: 100%;
     margin: 0;
     font-size: 0.9rem;
+    border-collapse: collapse;
+    border-spacing: -15rem;
+
     tr td {
       border-top: 1px solid #ffb22f;
-      padding: 1rem;
-      width: 100%;
       text-align: center;
+      align-items: center;
+      margin: 0;
+      width: 36%;
     }
     span {
-      font-size: 1rem;
+      font-size: 0.9rem;
+      display: flex;
+      width: 100%;
+    }
+    svg {
+      margin-left: 0.2rem;
+      margin-right: 0.2rem;
+      width: 32%;
+    }
+    p {
+      font-weight: 300;
+      font-size: 0.92rem;
     }
   }
 `;
@@ -94,7 +115,7 @@ export const H2SummaryPurchase = styled.div`
 export const Img = styled.img`
   width: 100%;
   @media (max-width: 500px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 

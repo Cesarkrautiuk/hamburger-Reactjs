@@ -87,3 +87,18 @@ export const LogoImg = styled.img`
     width: 44%;
   }
 `;
+export const ModalHeader = styled.div`
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+
+  svg {
+    color: #000000;
+  }
+  button {
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 1rem 1rem;
+  }
+`;

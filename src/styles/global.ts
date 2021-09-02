@@ -22,4 +22,23 @@ html{
         font-size:87.5%;
     }
 }
+.react-modal-overlay {
+  
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+
+}
+.react-modal-content{
+  width: 100%;
+  max-width: 480px;
+  background: #FFB22F;
+  padding: 3rem;
+  position: relative;
+  
+}
 `;

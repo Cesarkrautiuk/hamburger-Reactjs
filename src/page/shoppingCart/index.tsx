@@ -2,6 +2,7 @@ import { Header } from "../../component/header";
 import { ListerScroll } from "../../hooks/scrolListerner";
 import { useShoppingCart } from "../../hooks/useShoppingCart";
 import { lista } from "../../banco/estaComPressa";
+import { MdAddCircle, MdRemoveCircle, MdClose } from "react-icons/md";
 import {
   Content,
   Shopping,
@@ -71,13 +72,17 @@ export function ShoppingCart() {
                       <Img src={item.img} alt={item.title} />
                     </td>
                     <td>
-                      <span>{item.title}</span>
+                      <span> {item.title}</span>
                     </td>
                     <td>
-                      <p>{item.qt}</p>
+                      <p>
+                        <MdAddCircle size="15" />
+                        {item.qt}
+                        <MdRemoveCircle size="15" />
+                      </p>
                     </td>
                     <td>
-                      <H3Shopping>{item.price}</H3Shopping>
+                      <H3Shopping>R$ {item.price}</H3Shopping>
                     </td>
                   </tr>
                 );
