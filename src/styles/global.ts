@@ -34,11 +34,15 @@ html{
 
 }
 .react-modal-content{
-  width: 100%;
-  max-width: 480px;
+  width: 30%;
   background: #FFB22F;
   padding: 3rem;
-  position: relative;
-  
+  position: relative; 
+  @media (max-width: 768px) {
+    width: 45%; 
+  }
+  @media (max-width: 500px) {
+    width: 100%; 
+  }
 }
 `;

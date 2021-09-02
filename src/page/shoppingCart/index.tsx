@@ -2,7 +2,7 @@ import { Header } from "../../component/header";
 import { ListerScroll } from "../../hooks/scrolListerner";
 import { useShoppingCart } from "../../hooks/useShoppingCart";
 import { lista } from "../../banco/estaComPressa";
-import { MdAddCircle, MdRemoveCircle, MdClose } from "react-icons/md";
+import { MdAddCircle, MdRemoveCircle } from "react-icons/md";
 import {
   Content,
   Shopping,

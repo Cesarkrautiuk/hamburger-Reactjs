@@ -55,6 +55,7 @@ export const Menu = styled.header<propsHeader>`
     border-radius: 0.2rem;
     color: black;
     width: 4rem;
+    cursor: pointer;
   }
   @media (max-width: 500px) {
     nav {
@@ -100,5 +101,41 @@ export const ModalHeader = styled.div`
     outline: none;
     border: none;
     padding: 1rem 1rem;
+  }
+`;
+export const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+export const ButtonEntrar = styled.button`
+  width: 72%;
+  height: 3.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  @media (max-width: 500px) {
+    height: 3.8rem;
+    font-size: 1.3rem;
+  }
+`;
+export const A = styled.a`
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 1.1rem;
+  color: #000000;
+  padding-bottom: 1rem;
+  border-bottom: 0.3rem solid transparent;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 0.3rem solid #ffff;
+    padding-bottom: 1rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.8rem;
   }
 `;

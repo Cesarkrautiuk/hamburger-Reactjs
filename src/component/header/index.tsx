@@ -1,6 +1,14 @@
 import Logo from "../../asset/logo.png";
 import { MdMenu, MdShoppingCart, MdClose } from "react-icons/md";
-import { Menu, LogoImg, Span, ModalHeader } from "./styled";
+import {
+  Menu,
+  LogoImg,
+  Span,
+  ModalHeader,
+  ModalContent,
+  ButtonEntrar,
+  A,
+} from "./styled";
 import { HTMLAttributes, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Modal from "react-modal";
@@ -45,8 +53,14 @@ export function Header({ border, ...rest }: Props) {
         className="react-modal-content"
       >
         <ModalHeader>
-          <MdClose />
+          <MdClose onClick={closeModal} size="25" />
         </ModalHeader>
+        <ModalContent>
+          <ButtonEntrar>Entrar</ButtonEntrar>
+          <A onClick={() => history.push("/sobre")}>Sobre</A>
+          <A onClick={() => history.push("/cardapio")}>Cardápio</A>
+          <A onClick={() => history.push("/promocao")}>Promoção</A>
+        </ModalContent>
       </Modal>
     </>
   );

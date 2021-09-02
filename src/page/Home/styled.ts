@@ -36,6 +36,7 @@ export const Description = styled.div`
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-size: 1.1rem;
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     width: 33vw;
