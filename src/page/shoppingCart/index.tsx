@@ -60,8 +60,8 @@ export function ShoppingCart() {
               <tr>
                 <th></th>
                 <th>Produto</th>
-                <th>qtd</th>
-                <th>Preco</th>
+                <th>Qtd</th>
+                <th>Preço</th>
               </tr>
             </thead>
             <tbody>
@@ -94,10 +94,18 @@ export function ShoppingCart() {
           <H2SummaryPurchase>Resumo do pedido</H2SummaryPurchase>
           <BoxSummaryPurchase>
             <span>
-              <p>{`${cards.length} Produto`}</p> <p>R$ {total}</p>
+              <p>{`${cards.length} Produto`}</p>{" "}
+              <p>
+                R$ {total === 0 ? "00.00" : total.toString().padStart(3, "00")}
+              </p>
             </span>
             <span>
               <p>Frete</p> <p> R$ 00.00 </p>
+            </span>
+            <div />
+            <span>
+              <p>Total</p>{" "}
+              <p className="p"> {total.toString().padStart(2, "0")}</p>
             </span>
           </BoxSummaryPurchase>
           <Buttom>Finalizar pedido</Buttom>

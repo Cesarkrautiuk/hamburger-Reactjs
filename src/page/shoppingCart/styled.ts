@@ -38,11 +38,12 @@ export const H3Shopping = styled.h3`
 `;
 export const ListShopping = styled.table`
   color: #fff;
-  width: 68%;
+  width: 60%;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin-left: 2rem;
   border-collapse: collapse;
+  text-align: center;
   th {
     font-weight: 300;
     color: #9d9d9d;
@@ -51,7 +52,6 @@ export const ListShopping = styled.table`
     border-top: 1px solid #ffb22f;
     padding: 1rem;
     width: 20%;
-    text-align: center;
   }
   p {
     font-weight: 300;
@@ -74,7 +74,7 @@ export const ListShopping = styled.table`
       text-align: center;
       align-items: center;
       margin: 0;
-      width: 36%;
+      width: 30%;
     }
     span {
       font-size: 0.9rem;
@@ -95,6 +95,12 @@ export const ListShopping = styled.table`
 export const SummaryPurchase = styled.div`
   width: 22%;
   margin-right: 3rem;
+  margin: 0 auto;
+  @media (max-width: 500px) {
+    width: 92%;
+    height: 79%;
+    margin-top: 0.1rem;
+  }
 `;
 export const Buttom = styled.button`
   width: 14.3rem;
@@ -103,6 +109,13 @@ export const Buttom = styled.button`
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin-left: 1.5rem;
+  font-weight: bold;
+  @media (max-width: 500px) {
+    width: 65%;
+    height: 3.5rem;
+    margin-left: 4.5rem;
+    font-size: 0.9rem;
+  }
 `;
 export const H2SummaryPurchase = styled.div`
   color: #fff;
@@ -111,26 +124,28 @@ export const H2SummaryPurchase = styled.div`
   font-weight: 500;
   text-align: center;
   margin-bottom: 0.4rem;
+  font-size: 1.1rem;
 `;
 export const Img = styled.img`
   width: 100%;
   @media (max-width: 500px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 
 export const BoxSummaryPurchase = styled.div`
-  width: 100%;
-  height: 30%;
+  width: 95%;
+  height: 22%;
   background: #151413;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  border-radius: 0.3rem;
   span {
     display: flex;
     justify-content: space-between;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
     margin-top: 1rem;
     font-family: "Roboto", sans-serif;
     color: #bfbaba;
@@ -138,5 +153,20 @@ export const BoxSummaryPurchase = styled.div`
       color: #fff;
       font-weight: 500;
     }
+    .p {
+      color: #ffb22f;
+      font-weight: 600;
+    }
+  }
+  div {
+    width: 85%;
+    margin: 0 auto;
+    border-top: 0.1rem solid #ffb22f;
+    margin-top: 1.3rem;
+  }
+  @media (max-width: 500px) {
+    width: 87%;
+    height: 21%;
+    margin: 0 auto;
   }
 `;
